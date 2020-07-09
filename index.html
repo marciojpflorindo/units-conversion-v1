@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="styles.css" />
+		<!-- Font Awesome -->
+		<script
+			src="https://kit.fontawesome.com/55680e5221.js"
+			crossorigin="anonymous"
+		></script>
+		<title>Units conversion</title>
+	</head>
+	<body>
+		<div class="container">
+			<h1>Units Conversion app</h1>
+			<h2>Input value and choose units to convert</h2>
+
+			<div class="selector">
+				<input class="value" id="value" type="number" oninput="conversion()" />
+			</div>
+
+			<div class="units-container" onchange="conversion()">
+				<div class="units-left">
+					<select class="select-css" name="units-left" id="units-left">
+						<option id="km" value="km">Kilometer</option>
+						<option id="meter" value="meter">Meter</option>
+						<option id="cm" value="cm">Centimeter</option>
+						<option id="mm" value="mm">Millimiter</option>
+						<option id="mile" value="mile">Mile</option>
+					</select>
+				</div>
+
+				<div class="equal-sign">
+					<p> <i class="fas fa-arrow-alt-circle-right"></i> </p>
+				</div>
+
+				<div class="units-right">
+					<select class="select-css" name="units-right" id="units-right">
+						<option id="km" value="km">Kilometer</option>
+						<option id="meter" value="meter">Meter</option>
+						<option id="cm" value="cm">Centimeter</option>
+						<option id="mm" value="mm">Millimiter</option>
+						<option id="mile" value="mile">Mile</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="output">
+				<p>Output</p>
+				<p class="output-number" id="output"> </p>
+			</div>
+		</div>
+		<script src="./app.js"></script>
+	</body>
+</html>
